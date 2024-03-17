@@ -1,0 +1,7 @@
+kafka_python==2.0.2
+openai==1.14.1
+opentelemetry_propagator_aws_xray==1.0.1
+opentelemetry_propagator_gcp==1.6.0
+python-dotenv==1.0.1
+opentelemetry-sdk==1.22.0
+opentelemetry-exporter-otlp-proto-grpc==1.22.0

@@ -1,0 +1,6 @@
+kafka_python==2.0.2
+opentelemetry_propagator_gcp==1.6.0
+python-dotenv==1.0.1
+Requests==2.31.0
+opentelemetry-sdk==1.22.0
+opentelemetry-exporter-otlp-proto-grpc==1.22.0
