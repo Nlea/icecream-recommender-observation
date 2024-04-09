@@ -2,9 +2,6 @@ package com.nlea.icecream.weatherservice.kafka;
 
 
 import com.nlea.icecream.weatherservice.domain.WeatherFetcher;
-import com.nlea.icecream.weatherservice.config.KafkaConsumerConfig;
-import com.nlea.icecream.weatherservice.config.KafkaProducerConfig;
-//import dev.autometrics.bindings.Autometrics;
 import dev.autometrics.bindings.Autometrics;
 import io.micrometer.observation.Observation;
 import io.micrometer.observation.ObservationRegistry;
@@ -24,15 +21,11 @@ public class KafkaHandler {
 
     private final ObservationRegistry registry;
     private final KafkaTemplate<String,String> kafkaTemplate;
-    private final KafkaConsumerConfig kafkaConsumerConfig;
-    private final KafkaProducerConfig kafkaProducerConfig;
     private final WeatherFetcher weatherFetcher;
 
-    KafkaHandler(ObservationRegistry registry, KafkaTemplate kafkaTemplate, KafkaConsumerConfig kafkaConsumerConfig, KafkaProducerConfig kafkaProducerConfig, WeatherFetcher weatherFetcher){
+    KafkaHandler(ObservationRegistry registry, KafkaTemplate kafkaTemplate, WeatherFetcher weatherFetcher){
         this.registry =registry;
         this.kafkaTemplate = kafkaTemplate;
-        this.kafkaConsumerConfig = kafkaConsumerConfig;
-        this.kafkaProducerConfig = kafkaProducerConfig;
         this.weatherFetcher= weatherFetcher;
     }
 
